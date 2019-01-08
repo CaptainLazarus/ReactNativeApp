@@ -77,7 +77,7 @@ export default class App extends React.Component {
     }
   }
 
-  deleteItem = data => {
+  deleteItem(data){
     let allItems = [...this.state.subjects];
     let filteredItems = allItems.filter(item => item.sub != data.sub);
     this.setState({ subjects: filteredItems })
@@ -95,6 +95,7 @@ export default class App extends React.Component {
         </View>
         <View style = {styles.body}>
           <FlatList
+            keyExtractor = {item => item.sub}
             data = {this.state.subjects}
             renderItem = { ({item}) =>  
             <View style = {styles.totalsub}>
