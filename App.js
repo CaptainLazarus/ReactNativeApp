@@ -50,8 +50,6 @@ class Subject extends React.Component{
         <Text style = {styles.listnumbers}>{this.state.present}</Text>
         <Text style = {styles.listnumbers}>{this.state.absent}</Text>
       </View>
-
-      
     );
   }
 }
